@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let number = Number(prompt("Nhập vào số N :"));
+            let arr_str = number.toString();
+            let array = [arr_str[0]];
+            for (let i = 0; i < arr_str.length; i++) {
+                if (arr_str[i - 1] % 2 === 0 && arr_str[i] % 2 === 0) {
+                    array.push("-", arr_str[i]);
+                } else {
+                    array.push(arr_str[i]);
+                }
+            }
+            document.write(array.join(""));
+        </script>
+    </body>
+</html>
