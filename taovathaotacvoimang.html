@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>Sample Screen</h2>
+        <input type="text" id="input" />
+        <button type="button" onclick="add()">Add</button>
+        <button type="button" onclick="display()">Display</button>
+        <div id="output"></div>
+        <script>
+            let i = 0;
+            let array = new Array();
+            function add() {
+                array[i] = document.getElementById("input").value;
+                alert("Element" + " " + array[i] + " chỉ số " + i);
+                i++;
+                document.getElementById("input").value = "";
+            }
+            function display() {
+                let a = "<hr/>";
+                for (let i = 0; i < array.length; i++) {
+                    a += "Element" + " " + i + " =" + array[i] + "</br>";
+                }
+                document.getElementById("output").innerHTML = a;
+            }
+        </script>
+    </body>
+</html>
